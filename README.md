@@ -1,7 +1,20 @@
-# godot-visual-anomaly-detection
+# entities-godot-visual-anomaly-detection
 
-https://anomalib.readthedocs.io/en/latest/markdown/get_started/anomalib.html
+A one-class visual anomaly detector, trained on images of normal avatar poses, for spotting rendering bugs.
 
-Create a model that will help developers find bugs using visual anomaly detection.
+## What it is for
 
-Dinomaly is a single class classifier with high accuracy lifted with the DINOv2 model.
+It trains a one-class anomaly model on a folder of normal images and scores new images against it, so a render that departs from the normal set stands out.
+
+## Build and run
+
+```sh
+just train
+just predict
+```
+
+Both need a Python environment with the `anomalib` package installed.
+
+## Licence
+
+MIT; see `LICENSE`.
